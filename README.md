@@ -2,6 +2,17 @@
 
 > **专为麒麟系统编译的 LocalSend 二进制发布仓库**
 
+## ⚠️ **重要提示**
+
+如果您在下载时遇到 "没有那个文件或目录" 的错误，请使用以下**正确的下载链接**：
+
+```bash
+# 正确的下载命令
+wget https://github.com/Oligofornet/new/raw/main/localsend-kylin-x86_64-20250716.tar.gz
+```
+
+**注意**：请使用 `/raw/main/` 而不是 `/releases/download/`
+
 [![GitHub release](https://img.shields.io/github/release/Oligofornet/localsend-kylin-releases.svg)](https://github.com/Oligofornet/localsend-kylin-releases/releases)
 [![GitHub downloads](https://img.shields.io/github/downloads/Oligofornet/localsend-kylin-releases/total.svg)](https://github.com/Oligofornet/localsend-kylin-releases/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -27,7 +38,7 @@
 
 ```bash
 # 下载
-wget https://github.com/Oligofornet/localsend-kylin-releases/releases/download/v1.0.0/localsend-kylin-x86_64-20250716.tar.gz
+wget https://github.com/Oligofornet/new/raw/main/localsend-kylin-x86_64-20250716.tar.gz
 
 # 解压
 tar -xzf localsend-kylin-x86_64-20250716.tar.gz
@@ -41,12 +52,44 @@ sudo ./install.sh
 
 #### 📋 其他下载方式
 
+**方法一：使用 wget**
 ```bash
-# 使用 curl
-curl -L -O https://github.com/Oligofornet/localsend-kylin-releases/releases/download/v1.0.0/localsend-kylin-x86_64-20250716.tar.gz
+wget https://github.com/Oligofornet/new/raw/main/localsend-kylin-x86_64-20250716.tar.gz
+```
 
-# 克隆仓库
-git clone https://github.com/Oligofornet/localsend-kylin-releases.git
+**方法二：使用 curl**
+```bash
+curl -L -O https://github.com/Oligofornet/new/raw/main/localsend-kylin-x86_64-20250716.tar.gz
+```
+
+**方法三：克隆仓库**
+```bash
+git clone https://github.com/Oligofornet/new.git
+cd new/
+```
+
+**方法四：浏览器下载**
+- 访问：https://github.com/Oligofornet/new
+- 点击 `localsend-kylin-x86_64-20250716.tar.gz` 文件
+- 点击 "Download" 按钮
+
+**方法五：如果遇到问题**
+```bash
+# 清理之前的下载
+rm -f localsend-kylin-x86_64-20250716.tar.gz
+rm -rf localsend-kylin-x86_64-20250716/
+
+# 重新下载
+wget https://github.com/Oligofornet/new/raw/main/localsend-kylin-x86_64-20250716.tar.gz
+
+# 验证文件
+md5sum localsend-kylin-x86_64-20250716.tar.gz
+# 应该显示: 93ab308efa0ac53a994147e00295db15
+
+# 解压并安装
+tar -xzf localsend-kylin-x86_64-20250716.tar.gz
+cd localsend-kylin-x86_64-20250716/
+sudo ./install.sh
 ```
 
 ## 🔧 **系统要求**
